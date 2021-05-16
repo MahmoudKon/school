@@ -2,7 +2,7 @@
 
 -   Clone the project.
     ```
-        git clone https://github.com/mohamed37/on-school.git
+        https://github.com/MahmoudKon/school.git
     ```
 -   Go to the folder application using `cd school` command on your cmd or terminal
 -   Run `composer install` on your cmd or terminal.
