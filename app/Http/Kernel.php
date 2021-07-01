@@ -78,6 +78,6 @@ class Kernel extends HttpKernel
         // SweetAlert
         'sweetalert' => \UxWeb\SweetAlert\ConvertMessagesIntoSweetAlert::class,
 
-        // 'LogMiddleware' => LogMiddleware::class,
+        'LogMiddleware' => LogMiddleware::class,
     ];
 }

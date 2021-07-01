@@ -32,12 +32,12 @@
             <!-- END PERMISSIONS LINK -->
 
             <!-- BEGIN LOGS LINK -->
-            {{-- <li class="nav-item {{ active('logs') }}">
+            <li class="nav-item {{ active('logs') }}">
                 <a href="{{ route('dashboard.logs.index') }}">
                     <i class="fa fa-eye"></i>
                     <span class="menu-title" data-i18n="nav.invoice.main">@lang('general.logs')</span>
                 </a>
-            </li> --}}
+            </li>
             <!-- END LOGS LINK -->
 
             <!-- BEGIN MANAGMENT LINK -->

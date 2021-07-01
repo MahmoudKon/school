@@ -5,7 +5,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 // this function used in navbar to make the tag link is active by the url
 function active($model, $method = null)
@@ -85,48 +84,3 @@ function removeImage($oldImage, $folder)
     if (File::exists($path))
         unlink($path);
 } // end of removed image function
-
-// function makeLog($message = null)
-// {
-//     $controller = ['', 'bug'];
-
-//     if(isset(request()->route()->action))
-//         $controller = explode('@', array_slice( explode('\\', request()->route()->action['controller']), -1, 1)[0] );
-
-//     $model = Str::singular( str_replace('Controller', '', $controller[0]) );
-
-//     if($message == null) {
-//         switch ($controller[1]) {
-//             case 'index':
-//                 $message = 'visit the index of ' . str_replace('Controller', '', $controller[0]) . ' page';
-//                 break;
-//             case 'create':
-//                 $message = 'visit the form of create new ' . $model;
-//                 break;
-//             case 'store':
-//                 $message = 'store new ' . $model . ' data';
-//                 break;
-//             case 'edit':
-//                 $message = 'visit the form of edit ' . $model . ', his id is ' . request()->route()->parameters[request()->route()->parameterNames[0]];
-//                 break;
-//             case 'update':
-//                 $message = 'update the ' . $model . ' data, his id is ' . request()->route()->parameters[request()->route()->parameterNames[0]];
-//                 $page    = '<div class="badge badge-warning round"> <span> Update </span> <i class="fa fa-"></i> </div>';
-//             case 'destroy':
-//                 $message = 'destroy some ' . str_replace('Controller', '', $controller[0]) . ' data';
-//                 break;
-//             default:
-//                 $message = 'visit the ' . $controller[1] . ' page in ' . str_replace('Controller', '', $controller[0]);
-//         }
-//     }
-
-//     return [
-//         'message'       => $message,
-//         'url'           => request()->path(),
-//         'page'          => $controller[1],
-//         'method'        => request()->method(),
-//         'controller'    => $controller[0],
-//         'model'         => $model,
-//         'user_id'       => auth()->user()->id ?? 1,
-//     ];
-// } // data of log system
